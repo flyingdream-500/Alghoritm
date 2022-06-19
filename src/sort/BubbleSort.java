@@ -1,12 +1,13 @@
 package sort;
 
+import sort.base.AbstractSort;
+
 import static utils.ArrayUtils.*;
-import static utils.CommonUtils.println;
 
 /**
  * Сортировка пузырьком
  */
-public class BubbleSort implements Sort {
+public class BubbleSort extends AbstractSort {
 
     @Override
     public void sort(int[] array) {
@@ -23,14 +24,8 @@ public class BubbleSort implements Sort {
     }
 
     public static void main(String[] args) {
-        Sort bubbleSort = new BubbleSort();
-        int[] shuffledArray = getShuffledArray(20);
-
-        println(getArrayString(shuffledArray));
-
-        bubbleSort.sort(shuffledArray);
-
-        println(getArrayString(shuffledArray));
+        AbstractSort bubbleSort = new BubbleSort();
+        bubbleSort.execute();
     }
 
 /*
