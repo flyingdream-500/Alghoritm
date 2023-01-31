@@ -12,6 +12,15 @@ import java.util.stream.IntStream;
 public final class ArrayUtils {
 
     /**
+     * Метод для получения упорядоченного массива
+     * @param size размер требуемого массива
+     * @return упорядоченный массив
+     */
+    public static int[] getRangeArray(int size) {
+        return IntStream.rangeClosed(1, size).toArray();
+    }
+
+    /**
      * Метод для получения смешанного числового массива
      * @param size - размер порядкового массива
      * @return смешанный массив
